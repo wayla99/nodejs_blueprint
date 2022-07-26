@@ -10,7 +10,7 @@ const All = (req, res) => {
             });
         }
         catch (error) {
-            res.status(204).json();
+            res.status(204).json("");
         }
     })
 }
