@@ -1,4 +1,4 @@
-const ctrl = require('../../service/interface');
+const ctrl = require('../../service/user/interface');
 
 const Update = (req, res) => {
     const { id } = req.params;

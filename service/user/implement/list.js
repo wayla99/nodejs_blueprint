@@ -1,5 +1,5 @@
-const db = require('../../repository/mongodb/crud');
-const domain = require('../../domain/init');
+const db = require('../../../repository/mongodb/crud');
+const domain = require('../../../domain/init');
 
 function List(call, callback) {
     db.List(domain.User)

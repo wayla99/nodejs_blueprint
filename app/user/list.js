@@ -1,4 +1,4 @@
-const ctrl = require('../../service/interface');
+const ctrl = require('../../service/user/interface');
 
 const List = (req, res) => {
     ctrl.Service.List({}, (error, result) => {
