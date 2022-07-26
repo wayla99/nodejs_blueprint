@@ -6,7 +6,7 @@ function Read(call, callback) {
     db.Read(id, domain.User)
         .then((result) => {
             if (!result) {
-                callback('Could not find any todo with that id');
+                callback('Couldd not find any todo with that id');
             }
             callback(null, result);
         })
