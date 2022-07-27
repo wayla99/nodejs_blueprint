@@ -28,7 +28,7 @@ const Read = (key = '', domain) => new Promise((async (resolve, reject) => {
 
 const Delete = (key = '', domain) => new Promise((async (resolve, reject) => {
     try {
-        const data = await domain.findOneAndDelete({ _id: key }).exec();
+        const data = await domain.findOneAndDelete({ _id: key });
         resolve(data);
     } catch (e) {
         reject(e);

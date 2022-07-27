@@ -1,13 +1,11 @@
 const db = require('../../../repository/mongodb/crud');
 const domain = require('../../../domain/init');
 
-function Delete(call, callback) {
-    const { id } = call;
-    db.Delete(id, domain.User)
+function Create(call, callback) {
+    const data = call;
+    db.Create(data, domain.Company)
         .then(() => {
-            callback(null, {
-                status: true
-            });
+            callback(null, data);
         })
         .catch((e) => {
             callback(e);
@@ -15,4 +13,4 @@ function Delete(call, callback) {
 }
 
 
-module.exports = Delete;
+module.exports = Create;

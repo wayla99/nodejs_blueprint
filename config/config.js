@@ -1,7 +1,7 @@
 const config = {
     MongoDBEndpoint: "mongodb://touch:secret@localhost:27017/",
     MongoDBName: "nodejs_challenge?authSource=admin",
-    MongoDBTableName: "user",
+    MongoDBTableName: "companies",
 
     BasePath: "/api/v1/",
 

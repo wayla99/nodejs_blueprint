@@ -1,4 +1,4 @@
-const ctrl = require('../../service/user/interface');
+const ctrl = require('../../service/company/interface');
 const UUID = require('uuid-mongodb')
 
 const Create = (req, res) => {

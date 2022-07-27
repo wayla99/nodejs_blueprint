@@ -3,17 +3,16 @@ const domain = require('../../../domain/init');
 
 function Read(call, callback) {
     const { id } = call;
-    db.Read(id, domain.User)
+    db.Read(id, domain.Company)
         .then((result) => {
             if (!result) {
-                callback('Could not find any todo with that id');
+                return callback('Could not find any company with that id');
             }
-            callback(null, result);
+            return callback(null, result);
         })
         .catch((e) => {
-            callback(e);
+            return callback(e);
         });
 }
-
 
 module.exports = Read;
