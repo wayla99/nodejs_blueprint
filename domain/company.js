@@ -2,7 +2,7 @@ const mongoose = require('../repository/mongodb/init');
 const config = require('../config/config')
 const UUID = require('uuid-mongodb')
 
-const userSchema = mongoose.Schema(
+const companySchema = mongoose.Schema(
     {
         _id: { type: String, default: UUID.v4().toString('N') },
         name: { type: String, required: true }
@@ -15,6 +15,6 @@ const userSchema = mongoose.Schema(
     }
 )
 
-const user = mongoose.model(config.MongoDBTableName, userSchema)
+const company = mongoose.model(config.MongoDBTableName, companySchema)
 
-module.exports = user
+module.exports = company

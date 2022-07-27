@@ -2,15 +2,15 @@ const db = require('../../../repository/mongodb/crud');
 const domain = require('../../../domain/init');
 
 function List(call, callback) {
-    db.List(domain.User)
+    db.List(domain.Company)
         .then((result) => {
             if (!result) {
-                callback(null, { data: [] });
+                return callback(null);
             }
-            callback(null, { data: result });
+            return callback(null, { data: result });
         })
         .catch((e) => {
-            callback(e);
+            return callback(e);
         });
 }
 

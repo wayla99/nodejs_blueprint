@@ -1,16 +1,16 @@
-const ctrl = require('../../service/user/interface');
+const ctrl = require('../../service/company/interface');
 
 const Delete = (req, res) => {
     const { id } = req.params;
     ctrl.Service.Delete({ id }, (error, result) => {
-        if (!error) {
-            res.status(200).json({
+        if (!error && result != null) {
+            return res.status(200).json({
                 code: '200',
                 status: 'Delete data success',
-                data: { result }
+                data: {}
             });
         } else {
-            res.status(422).json({
+            return res.status(422).json({
                 code: '422',
                 status: 'ERROR',
                 error: [{
