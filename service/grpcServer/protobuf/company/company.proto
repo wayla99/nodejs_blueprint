@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package = "/company";
+
+package company;
+
+message CompanyRequest {
+}
+
+message CompanyReply{
+  int64 total =1;
+  repeated CompanyData companyList =2;
+  string error =3;
+}
+
+message CompanyData {
+  string id = 1;
+  string name = 2;
+}
+
+service Company{
+  rpc AllCompany(CompanyRequest) returns (CompanyReply);
+}
