@@ -1,13 +1,10 @@
 # nodejs_challenge
 
-### run nodejs
+### run nodejs,express,nodemon,cors
 ```
 npm init -y
 npm install express
 npm install nodemon
-```
-### cors
-```
 npm install cors --save
 ```
 
