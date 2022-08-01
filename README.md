@@ -61,10 +61,7 @@ export PATH="$PATH:$(go env GOPATH)/bin"
 ### Protobuf Generate
 คำสั่งในการ generate protobuf
 ```
-
-
 cd service/grpcServer
-protoc --go_out=plugins=grpc:protobuf protobuf/example/example.proto
 
 protoc --go_out=. --go_opt=paths=source_relative \
     --go-grpc_out=. --go-grpc_opt=paths=source_relative \
