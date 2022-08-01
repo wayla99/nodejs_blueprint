@@ -5,10 +5,10 @@ function Create(call, callback) {
     const data = call;
     db.Create(data, domain.Company)
         .then(() => {
-            callback(null, data);
+            return callback(null, data);
         })
         .catch((e) => {
-            callback(e);
+            return callback(e);
         });
 }
 
