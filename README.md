@@ -43,7 +43,7 @@ npm install uuid-mongodb
 
 ### Go init
 ```
-go mod init ""
+go mod init "example"
 ```
 ### Go get package in project
 ```
